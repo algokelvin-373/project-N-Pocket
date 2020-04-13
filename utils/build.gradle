@@ -27,8 +27,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation Kotlin.jetbrains
     implementation AndroidX.appCompat
     implementation AndroidX.core
     implementation Room.runtime

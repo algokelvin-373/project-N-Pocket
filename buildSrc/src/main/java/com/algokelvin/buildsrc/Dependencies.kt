@@ -35,6 +35,7 @@ object AndroidX {
 
 object Design {
     val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+    val material = "com.google.android.material:material:1.1.0"
 }
 
 object Room {
