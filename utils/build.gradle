@@ -29,5 +29,6 @@ android {
 dependencies {
     implementation AndroidX.appCompat
     implementation AndroidX.core
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation Room.runtime
 }
