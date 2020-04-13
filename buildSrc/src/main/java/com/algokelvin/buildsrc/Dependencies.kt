@@ -1,7 +1,7 @@
 package com.algokelvin.buildsrc
 
-val kotlin_version = "1.3.41"
-val gradle_version = "3.5.3"
+const val kotlin_version = "1.3.41"
+const val gradle_version = "3.5.3"
 
 object Sdk {
     val minSdk = 14
@@ -35,4 +35,8 @@ object AndroidX {
 
 object Design {
     val constrainsLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+}
+
+object Module {
+    val utils = ":utils"
 }
