@@ -27,8 +27,8 @@ class OvoFragment : Fragment() {
 
         titleNoteMoney.text = getString(R.string.note_ovo)
 
-        val listPocketMoney = pocketViewModel.getNotePocket(requireContext()) as ArrayList<PocketEntity>
-        rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketMoney) {
+        val listPocketOvo = pocketViewModel.getNotePocket(requireContext(), "ovo") as ArrayList<PocketEntity>
+        rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketOvo) {
             data {
                 viewItem.descriptionPocket.text = item?.description
                 viewItem.amountPocket.text = item?.amount.toString()

@@ -11,8 +11,8 @@ class PocketViewModel : ViewModel() {
         val pocketDatabase = PocketDB.getInstance(context)
         pocketDatabase.pocketDao().insertPocket(pocketEntity)
     }
-    fun getNotePocket(context: Context): List<PocketEntity> {
+    fun getNotePocket(context: Context, type: String): List<PocketEntity> {
         val pocketDatabase = PocketDB.getInstance(context)
-        return pocketDatabase.pocketDao().getAllPocket()
+        return pocketDatabase.pocketDao().getAllPocket(type)
     }
 }

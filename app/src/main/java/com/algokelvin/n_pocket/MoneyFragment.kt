@@ -25,7 +25,7 @@ class MoneyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val listPocketMoney = pocketViewModel.getNotePocket(requireContext()) as ArrayList<PocketEntity>
+        val listPocketMoney = pocketViewModel.getNotePocket(requireContext(), "money") as ArrayList<PocketEntity>
         rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketMoney) {
             data {
                 viewItem.descriptionPocket.text = item?.description
