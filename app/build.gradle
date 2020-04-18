@@ -30,6 +30,7 @@ dependencies {
     implementation Kotlin.jetbrains
     implementation Design.material
     implementation Design.constraintLayout
+    implementation AndroidX.lifecycle
 
     implementation project(Module.utils)
 }

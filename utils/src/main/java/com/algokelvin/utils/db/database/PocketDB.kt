@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.algokelvin.utils.db.entity.Pocket
+import com.algokelvin.utils.db.entity.PocketEntity
 import com.algokelvin.utils.db.sql.PocketDao
 
-@Database(entities = [Pocket::class], version = 1)
+@Database(entities = [PocketEntity::class], version = 1)
 abstract class PocketDB : RoomDatabase() {
     abstract fun pocketDao() : PocketDao
 
@@ -20,7 +20,7 @@ abstract class PocketDB : RoomDatabase() {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
-                        PocketDB::class.java, "Pocket.db"
+                        PocketDB::class.java, "PocketDatabase.db"
                     )
                         .allowMainThreadQueries()
                         .build()

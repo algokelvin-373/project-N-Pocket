@@ -2,6 +2,7 @@ package com.algokelvin.buildsrc
 
 const val kotlin_version = "1.3.41"
 const val gradle_version = "3.5.3"
+const val room_version = "2.2.5"
 
 object Sdk {
     val minSdk = 14
@@ -31,15 +32,19 @@ object GradleAndroid {
 object AndroidX {
     val appCompat = "androidx.appcompat:appcompat:1.1.0"
     val core = "androidx.core:core-ktx:1.2.0"
+    val legacy = "androidx.legacy:legacy-support-v4:1.0.0"
+    val lifecycle = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 }
 
 object Design {
     val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
     val material = "com.google.android.material:material:1.1.0"
+    val recyclerview = "androidx.recyclerview:recyclerview:1.1.0"
 }
 
 object Room {
-    val runtime = "androidx.room:room-runtime:2.2.5"
+    val runtime = "androidx.room:room-runtime:$room_version"
+    val compilerRoom = "androidx.room:room-compiler:$room_version"
 }
 
 object Module {

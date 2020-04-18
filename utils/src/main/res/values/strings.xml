@@ -3,4 +3,10 @@
     <string name="money">money</string>
     <string name="gopay">gopay</string>
     <string name="ovo">ovo</string>
+    <string name="note_money">Note Money</string>
+    <string name="note_gopay">Note Gopay</string>
+    <string name="note_ovo">Note Ovo</string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="amount">Amount</string>
 </resources>

@@ -2,6 +2,7 @@ import com.algokelvin.buildsrc.*
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion CoreAndroid.compileVersion
     buildToolsVersion CoreAndroid.buildVersion
@@ -29,6 +30,8 @@ android {
 dependencies {
     implementation AndroidX.appCompat
     implementation AndroidX.core
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation AndroidX.legacy
     implementation Room.runtime
+    kapt Room.compilerRoom
+    implementation Design.recyclerview
 }
