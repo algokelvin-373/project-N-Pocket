@@ -50,7 +50,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/data_amount"
             android:layout_marginTop="32dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -68,13 +67,13 @@
             android:hint="@string/enter_amount">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/data_amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/data_description"
             android:layout_marginTop="32dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,13 +91,15 @@
             android:hint="@string/enter_amount">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/data_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:text="submit"
+            android:id="@+id/btn_submit"
+            android:text="@string/submit"
             android:background="@drawable/border_button_submit"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp"

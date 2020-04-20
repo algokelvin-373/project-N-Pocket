@@ -12,4 +12,5 @@
     <string name="input_note_pocket">Input Note Pocket %s</string>
     <string name="input">Input</string>
     <string name="enter_amount">Enter Amount</string>
+    <string name="submit">submit</string>
 </resources>
