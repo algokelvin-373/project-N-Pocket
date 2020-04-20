@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,10 +7,104 @@
     android:layout_height="match_parent"
     tools:context=".InputPocketActivity">
 
-    <TextView
-        android:id="@+id/titleInput"
-        android:text="ds"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_note_pocket"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:background="@drawable/border_input_layout"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_date"
+            app:startIconContentDescription="Description Content"
+            app:helperTextTextColor="@android:color/holo_green_light"
+            app:errorEnabled="true"
+            android:hint="@string/enter_amount">
+
+            <EditText
+                android:id="@+id/data_date"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/data_amount"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:background="@drawable/border_input_layout"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_money"
+            app:startIconContentDescription="Description Content"
+            app:helperTextTextColor="@android:color/holo_green_light"
+            app:helperTextEnabled="true"
+            app:helperText="Example: Rp 6.000 (input: 6000)"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:errorEnabled="true"
+            android:hint="@string/enter_amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/data_description"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:background="@drawable/border_input_layout"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_note"
+            app:startIconContentDescription="Description Content"
+            app:helperTextTextColor="@android:color/holo_green_light"
+            app:helperTextEnabled="true"
+            app:helperText="Note about your amount"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:errorEnabled="true"
+            android:hint="@string/enter_amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:text="submit"
+            android:background="@drawable/border_button_submit"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
