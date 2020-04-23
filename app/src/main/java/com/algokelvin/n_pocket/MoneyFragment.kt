@@ -28,8 +28,8 @@ class MoneyFragment : Fragment() {
         val listPocketMoney = pocketViewModel.getNotePocket(requireContext(), "money") as ArrayList<PocketEntity>
         rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketMoney) {
             data {
-                viewItem.descriptionPocket.text = item?.description
-                viewItem.amountPocket.text = item?.amount.toString()
+                viewItem.descriptionPocket.text = getString(R.string._160_data_description, item?.description)
+                viewItem.amountPocket.text = getString(R.string._160_data_amount, item?.amount.toString())
             }
             setLayoutManager(linearLayoutManager(), 0)
             setAdapter()
