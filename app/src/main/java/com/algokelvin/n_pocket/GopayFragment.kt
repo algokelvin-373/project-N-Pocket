@@ -46,7 +46,7 @@ class GopayFragment : Fragment() {
             picker.show()
         }
 
-        val listPocketGopay = pocketViewModel.getNotePocket(requireContext(), "gopay") as ArrayList<PocketEntity>
+        val listPocketGopay = pocketViewModel.getNotePocket(requireContext(), "gopay", dateMoney.text.toString()) as ArrayList<PocketEntity>
         rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketGopay) {
             data {
                 viewItem.descriptionPocket.text = getString(R.string._160_data_description, item?.description)

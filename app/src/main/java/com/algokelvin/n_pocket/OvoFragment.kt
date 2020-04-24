@@ -46,7 +46,7 @@ class OvoFragment : Fragment() {
             picker.show()
         }
 
-        val listPocketOvo = pocketViewModel.getNotePocket(requireContext(), "ovo") as ArrayList<PocketEntity>
+        val listPocketOvo = pocketViewModel.getNotePocket(requireContext(), "ovo", dateMoney.text.toString()) as ArrayList<PocketEntity>
         rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketOvo) {
             data {
                 viewItem.descriptionPocket.text = getString(R.string._160_data_description, item?.description)
