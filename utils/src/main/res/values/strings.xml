@@ -10,7 +10,6 @@
     <string name="description">Description</string>
     <string name="amount">Amount</string>
     <string name="input_note_pocket">Input Note Pocket %s</string>
-    <string name="input">Input</string>
     <string name="enter_amount">Enter Amount</string>
     <string name="submit">submit</string>
     <string name="_160_data_description"><![CDATA[ %s]]></string>

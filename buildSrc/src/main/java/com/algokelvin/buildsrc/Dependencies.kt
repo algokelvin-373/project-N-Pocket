@@ -1,7 +1,6 @@
 package com.algokelvin.buildsrc
 
-const val kotlin_version = "1.3.41"
-const val gradle_version = "3.5.3"
+const val kotlin_version = "1.3.61"
 const val room_version = "2.2.5"
 
 object Sdk {
@@ -23,10 +22,6 @@ object CoreAndroid {
 object Kotlin {
     val jetbrains = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     val gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-}
-
-object GradleAndroid {
-    val gradleTool = "com.android.tools.build:gradle:$gradle_version"
 }
 
 object AndroidX {
