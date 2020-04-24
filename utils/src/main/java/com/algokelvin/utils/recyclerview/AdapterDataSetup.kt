@@ -10,7 +10,7 @@ fun <T> RecyclerView.setupAdapterData(layout: Int, context: Context, list: Array
 }
 
 @Suppress("UNCHECKED_CAST")
-class AdapterDataSetup<T>(layout: Int, context: Context, val list: ArrayList<T>, private val recyclerView: RecyclerView) {
+class AdapterDataSetup<T>(layout: Int, context: Context, list: ArrayList<T>, private val recyclerView: RecyclerView) {
     private val gridLayoutManager = "GRID LAYOUT MANAGER"
     private val default = "DEFAULT"
     private var adapterData = AdapterDataGeneral(layout, context, list)
