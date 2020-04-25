@@ -14,4 +14,6 @@
     <string name="submit">submit</string>
     <string name="_160_data_description"><![CDATA[ %s]]></string>
     <string name="_160_data_amount"><![CDATA[ %s]]></string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
 </resources>
