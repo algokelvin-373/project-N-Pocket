@@ -14,4 +14,8 @@ class PocketViewModel : ViewModel() {
         val pocketDatabase = PocketDB.getInstance(context)
         return pocketDatabase.pocketDao().getAllPocket(type, date)
     }
+    fun getAmountPocket(context: Context, type: String): Int {
+        val pocketDatabase = PocketDB.getInstance(context)
+        return pocketDatabase.pocketDao().getBalancePocket(type)
+    }
 }

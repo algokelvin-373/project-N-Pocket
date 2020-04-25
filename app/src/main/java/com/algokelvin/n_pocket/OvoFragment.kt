@@ -29,6 +29,7 @@ class OvoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         titleNoteMoney.text = getString(R.string.note_ovo)
+        amount_balance_money.text = pocketViewModel.getAmountPocket(requireContext(), "ovo").toString()
         dateMoney.text = getDate("d MMM yyyy")
         dateMoney.setOnClickListener {
             val calender = Calendar.getInstance()

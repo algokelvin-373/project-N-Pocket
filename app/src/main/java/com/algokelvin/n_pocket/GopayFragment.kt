@@ -29,6 +29,7 @@ class GopayFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         titleNoteMoney.text = getString(R.string.note_gopay)
+        amount_balance_money.text = pocketViewModel.getAmountPocket(requireContext(), "gopay").toString()
         dateMoney.text = getDate("d MMM yyyy")
         dateMoney.setOnClickListener {
             val calender = Calendar.getInstance()
