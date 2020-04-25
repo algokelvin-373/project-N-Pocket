@@ -16,4 +16,14 @@
     <string name="_160_data_amount"><![CDATA[ %s]]></string>
     <string name="back">Back</string>
     <string name="next">Next</string>
+    <string name="welcome_app">Welcome in N-Pocket</string>
+    <string name="description_apps">This application is to use manage your pocket (money, copay, ovo). With this, you can be easier to manage your expenses and income.</string>
+    <string name="input_your_name">Input Your Name</string>
+    <string name="enter_number_phone_profile">Enter Your Number Phone</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="input_your_money_balance">Input Your Money Balance</string>
+    <string name="enter_money_saldo">Enter Money Saldo</string>
+    <string name="enter_gopay_saldo">Enter GOPAY Saldo</string>
+    <string name="enter_ovo_saldo">Enter OVO Saldo</string>
+    <string name="finish">Finish</string>
 </resources>
