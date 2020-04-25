@@ -13,10 +13,15 @@ import kotlinx.android.synthetic.main.activity_introduction.*
 class IntroductionActivity : AppCompatActivity() {
     private var itemPage = 0
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         val sharePreference = getSharedPreferences("profile", Context.MODE_PRIVATE)
-        if (sharePreference.getString("name", "default")?.isNotEmpty()!!) startActivity(Intent(this, MainActivity::class.java))
-        else setContentView(R.layout.activity_introduction)
+        if (sharePreference.getString("name", null) != null) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+        else {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_introduction)
+        }
 
         val introductionViewPageAdapter = AppsViewPageAdapter(supportFragmentManager)
         introductionViewPageAdapter.addAppsPage(IntroductionOne(), IntroductionTwo(), IntroductionThree())
