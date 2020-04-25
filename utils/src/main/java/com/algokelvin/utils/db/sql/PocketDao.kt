@@ -7,6 +7,7 @@ import com.algokelvin.utils.db.entity.PocketEntity
 
 @Dao
 interface PocketDao {
+    @Query("SELECT SUM(amount_pocket) FROM pocketentity WHERE type_pocket = :type") fun getBalancePocket(type: String) : Int
     @Query("SELECT * FROM pocketentity WHERE type_pocket = :type AND date_pocket = :date") fun getAllPocket(type: String, date: String) : List<PocketEntity>
     @Insert fun insertPocket(pocketEntity: PocketEntity)
 }

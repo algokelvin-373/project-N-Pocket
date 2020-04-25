@@ -28,6 +28,7 @@ class MoneyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        amount_balance_money.text = pocketViewModel.getAmountPocket(requireContext(), "money").toString()
         dateMoney.text = getDate("d MMM yyyy")
         dateMoney.setOnClickListener {
             val calender = Calendar.getInstance()
