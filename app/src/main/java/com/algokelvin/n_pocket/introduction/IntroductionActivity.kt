@@ -1,9 +1,12 @@
 package com.algokelvin.n_pocket.introduction
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.algokelvin.n_pocket.AppsViewPageAdapter
+import com.algokelvin.n_pocket.MainActivity
 import com.algokelvin.n_pocket.R
 import kotlinx.android.synthetic.main.activity_introduction.*
 
@@ -11,7 +14,9 @@ class IntroductionActivity : AppCompatActivity() {
     private var itemPage = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_introduction)
+        val sharePreference = getSharedPreferences("profile", Context.MODE_PRIVATE)
+        if (sharePreference.getString("name", "default")?.isNotEmpty()!!) startActivity(Intent(this, MainActivity::class.java))
+        else setContentView(R.layout.activity_introduction)
 
         val introductionViewPageAdapter = AppsViewPageAdapter(supportFragmentManager)
         introductionViewPageAdapter.addAppsPage(IntroductionOne(), IntroductionTwo(), IntroductionThree())
