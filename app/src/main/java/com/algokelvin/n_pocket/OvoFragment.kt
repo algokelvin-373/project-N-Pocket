@@ -11,6 +11,7 @@ import com.algokelvin.utils.db.entity.PocketEntity
 import com.algokelvin.utils.getDate
 import com.algokelvin.utils.getDateConvert
 import com.algokelvin.utils.recyclerview.setupAdapterData
+import com.algokelvin.utils.rupiahFormat
 import com.algokelvin.utils.viewmodel.PocketViewModel
 import kotlinx.android.synthetic.main.fragment_money.*
 import kotlinx.android.synthetic.main.item_data_pocket.view.*
@@ -29,7 +30,7 @@ class OvoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         titleNoteMoney.text = getString(R.string.note_ovo)
-        amount_balance_money.text = pocketViewModel.getAmountPocket(requireContext(), "ovo").toString()
+        amount_balance_money.text = getString(R.string.balance, rupiahFormat(pocketViewModel.getAmountPocket(requireContext(), "ovo").toString()))
         dateMoney.text = getDate("d MMM yyyy")
         dateMoney.setOnClickListener {
             val calender = Calendar.getInstance()
@@ -51,7 +52,7 @@ class OvoFragment : Fragment() {
         rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketOvo) {
             data {
                 viewItem.descriptionPocket.text = getString(R.string._160_data_description, item?.description)
-                viewItem.amountPocket.text = getString(R.string._160_data_amount, item?.amount.toString())
+                viewItem.amountPocket.text = getString(R.string._160_data_amount, rupiahFormat(item?.amount.toString()))
             }
             setLayoutManager(linearLayoutManager(), 0)
             setAdapter()
