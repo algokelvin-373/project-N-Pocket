@@ -1,5 +1,6 @@
 package com.algokelvin.utils
 
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -15,4 +16,9 @@ fun getDateConvert(oldFormat: String, oldDate: String, newFormat: String): Strin
     sdf.timeZone = TimeZone.getDefault()
     sdf.applyPattern(newFormat)
     return sdf.format(date)
+}
+fun rupiahFormat(amount : String?) : String{
+    val formatter = DecimalFormat("#,###")
+    val amount1 = amount?.replace(".00","")
+    return formatter.format(amount1?.toInt()).toString().replace(",",".")
 }
