@@ -1,14 +1,20 @@
 package com.algokelvin.utils
 
+import android.text.format.DateFormat
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
+val date: Date = Calendar.getInstance().time
+
 fun getDate(dateFormat: String): String {
-    val date = Calendar.getInstance().time
     val formatDate = SimpleDateFormat(dateFormat, Locale.getDefault())
     return formatDate.format(date)
 }
+fun getDay() = DateFormat.format("dd", date).toString()
+fun getMonth() = DateFormat.format("MM", date).toString()
+fun getYear() = DateFormat.format("yyyy", date).toString()
+
 fun getDateConvert(oldFormat: String, oldDate: String, newFormat: String): String {
     val sdf = SimpleDateFormat(oldFormat, Locale.ENGLISH)
     sdf.timeZone = TimeZone.getTimeZone("UTC")

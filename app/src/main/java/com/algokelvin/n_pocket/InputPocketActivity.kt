@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.algokelvin.utils.*
 import com.algokelvin.utils.db.entity.PocketEntity
-import com.algokelvin.utils.getDateConvert
 import com.algokelvin.utils.viewmodel.PocketViewModel
 import kotlinx.android.synthetic.main.activity_input_pocket.*
 import java.util.*
@@ -31,7 +31,8 @@ class InputPocketActivity : AppCompatActivity() {
             else -> "00"
         }
 
-        var d = "0"; var m = "0"; var y = "0"
+        var d = getDay(); var m = getMonth(); var y = getYear()
+        data_date.text = getDate("d MMM yyyy")
         data_date.setOnClickListener {
             val calender = Calendar.getInstance()
             val day: Int = calender.get(Calendar.DAY_OF_MONTH)
@@ -45,12 +46,13 @@ class InputPocketActivity : AppCompatActivity() {
                 }
                 d = dayOfMonth.toString()
                 date = getDateConvert("yyyy.MM.dd", "$y.$m.$d", "d MMM yyyy")
+                data_date.text = date
             }, year, month, day)
             picker.show()
         }
 
         btn_submit.setOnClickListener {
-            val pocketEntity = PocketEntity((idCode+d+m+y+(0..100).random()).toLong(), date,
+            val pocketEntity = PocketEntity((idCode+d+m+y+(0..100).random()).toLong(), data_date.text as String,
                 data_amount.text.toString().toInt(), data_description.text.toString(), typePocket)
             pocketViewModel.insertNotePocket(this, pocketEntity)
             Toast.makeText(this, "Success input note pocket money", Toast.LENGTH_LONG).show()
