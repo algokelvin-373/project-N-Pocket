@@ -25,30 +25,30 @@
             android:gravity="center"
             android:layout_marginTop="16dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:layout_marginTop="32dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="4dp"
-            android:background="@drawable/border_input_layout"
-            app:endIconMode="clear_text"
-            app:startIconDrawable="@drawable/ic_date"
-            app:startIconContentDescription="Description Content"
-            app:helperTextTextColor="@android:color/holo_green_light"
-            app:errorEnabled="true"
-            android:hint="@string/enter_amount">
+            android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/data_date"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="match_parent"
+            <ImageView
+                app:srcCompat="@drawable/ic_date"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:importantForAutofill="no"
-                android:inputType="date"
-                tools:ignore="LabelFor" />
+                android:contentDescription="@string/todo" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/data_date"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="28 Apr 2020"/>
+
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_marginTop="32dp"
@@ -89,7 +89,7 @@
             app:counterEnabled="true"
             app:counterMaxLength="200"
             app:errorEnabled="true"
-            android:hint="@string/enter_amount">
+            android:hint="@string/enter_description">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/data_description"
