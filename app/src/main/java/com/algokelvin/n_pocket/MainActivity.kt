@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             val toInputPocket = Intent(this, InputPocketActivity::class.java)
             toInputPocket.putExtra("type_pocket_data", typePocket)
             startActivity(toInputPocket)
+            finish()
         }
 
         tabs_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

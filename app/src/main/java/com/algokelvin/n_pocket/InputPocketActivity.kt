@@ -2,6 +2,7 @@ package com.algokelvin.n_pocket
 
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -54,6 +55,8 @@ class InputPocketActivity : AppCompatActivity() {
                 data_amount.text.toString().toInt(), data_description.text.toString(), typePocket)
             pocketViewModel.insertNotePocket(this, pocketEntity)
             Toast.makeText(this, "Success input note pocket money", Toast.LENGTH_LONG).show()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 }
