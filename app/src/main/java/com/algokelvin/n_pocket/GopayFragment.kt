@@ -42,12 +42,17 @@ class GopayFragment : Fragment() {
                         else -> (m + 1).toString()
                     }
                     dateMoney.text = getDateConvert("yyyy.MM.dd", "$y.$month.$d", "d MMM yyyy")
+                    val listPocketGopay = pocketViewModel.getNotePocket(requireContext(), "gopay", dateMoney.text.toString()) as ArrayList<PocketEntity>
+                    setItemPocketGOPAY(listPocketGopay)
                 }, year, month, day)
             picker.show()
         }
 
         val listPocketGopay = pocketViewModel.getNotePocket(requireContext(), "gopay", dateMoney.text.toString()) as ArrayList<PocketEntity>
-        rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketGopay) {
+        setItemPocketGOPAY(listPocketGopay)
+    }
+    private fun setItemPocketGOPAY(listPocketMoney: ArrayList<PocketEntity>) {
+        rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketMoney) {
             data {
                 viewItem.descriptionPocket.text = getString(R.string._160_data_description, item?.description)
                 viewItem.amountPocket.text = setNegativePrice(item?.amount!!)
