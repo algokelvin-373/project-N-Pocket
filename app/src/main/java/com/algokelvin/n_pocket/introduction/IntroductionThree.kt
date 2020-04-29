@@ -23,11 +23,11 @@ class IntroductionThree : IntroductionFragment(R.layout.fragment_introduction_th
         btn_balance_begin.setOnClickListener {
             val date = getDate("dd MMM yyyy")
             val balanceMoney = PocketEntity(("11"+"26"+"04"+"2020"+(0..100).random()).toLong(), date,
-                money_balance.text.toString().toInt(), "Saldo Awal Uang", "money")
+                money_balance.text.toString().toInt(), "Balance Money", "money")
             val balanceGopay = PocketEntity(("11"+"26"+"04"+"2020"+(0..100).random()).toLong(), date,
-                gopay_balance.text.toString().toInt(), "Saldo Awal GOPAY", "gopay")
+                gopay_balance.text.toString().toInt(), "Balance GOPAY", "gopay")
             val balanceOvo = PocketEntity(("11"+"26"+"04"+"2020"+(0..100).random()).toLong(), date,
-                ovo_balance.text.toString().toInt(), "Saldo Awal OVO", "ovo")
+                ovo_balance.text.toString().toInt(), "Balance OVO", "ovo")
             pocketViewModel.insertNotePocket(requireContext(), balanceMoney)
             pocketViewModel.insertNotePocket(requireContext(), balanceGopay)
             pocketViewModel.insertNotePocket(requireContext(), balanceOvo)

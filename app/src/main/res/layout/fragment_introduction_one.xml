@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="300dp"
-            android:fontFamily="sans-serif-condensed-medium"
+            app:fontFamily="@string/font_family_condensed_medium"
             android:text="@string/welcome_app"
             android:textColor="@android:color/black"
             android:textSize="24sp"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
+            app:fontFamily="@string/font_family_condensed_medium"
             android:text="@string/description_apps"
             android:textColor="@android:color/black"
             android:textSize="16sp"

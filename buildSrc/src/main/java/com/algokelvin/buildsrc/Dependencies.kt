@@ -10,7 +10,7 @@ object Sdk {
 
 object Version {
     const val code = 1
-    const val versionName = "1.0.0"
+    const val versionName = "0.5.1"
 }
 
 object CoreAndroid {

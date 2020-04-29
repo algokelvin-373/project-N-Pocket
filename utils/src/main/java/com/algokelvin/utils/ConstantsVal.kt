@@ -1,9 +1,11 @@
 package com.algokelvin.utils
 
 import android.text.format.DateFormat
+import androidx.fragment.app.Fragment
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.math.abs
 
 val date: Date = Calendar.getInstance().time
 
@@ -27,4 +29,10 @@ fun rupiahFormat(amount : String?) : String{
     val formatter = DecimalFormat("#,###")
     val amount1 = amount?.replace(".00","")
     return formatter.format(amount1?.toInt()).toString().replace(",",".")
+}
+fun Fragment.setNegativePrice(amount: Int): String {
+    return when(amount < 0) {
+        true -> getString(R.string._160_data_amount_negative, rupiahFormat(abs(amount).toString()))
+        else -> getString(R.string._160_data_amount, rupiahFormat(amount.toString()))
+    }
 }
