@@ -1,42 +1,48 @@
 package com.algokelvin.buildsrc
 
-const val kotlin_version = "1.3.41"
-const val gradle_version = "3.5.3"
+const val kotlin_version = "1.3.61"
+const val room_version = "2.2.5"
 
 object Sdk {
-    val minSdk = 14
-    val targetSdk = 29
+    const val minSdk = 14
+    const val targetSdk = 29
 }
 
 object Version {
-    val code = 1
-    val versionName = "1.0.0"
+    const val code = 1
+    const val versionName = "0.5.1"
 }
 
 object CoreAndroid {
-    val compileVersion = 29
-    val buildVersion = "29.0.2"
-    val IdApps = "com.algokelvin.n_pocket"
+    const val compileVersion = 29
+    const val buildVersion = "29.0.2"
+    const val IdApps = "com.algokelvin.n_pocket"
+    const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    const val consumerRules= "consumer-rules.pro"
 }
 
 object Kotlin {
-    val jetbrains = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    val gradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-}
-
-object GradleAndroid {
-    val gradleTool = "com.android.tools.build:gradle:$gradle_version"
+    const val jetbrains = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 object AndroidX {
-    val appCompat = "androidx.appcompat:appcompat:1.1.0"
-    val core = "androidx.core:core-ktx:1.2.0"
+    const val appCompat = "androidx.appcompat:appcompat:1.1.0"
+    const val core = "androidx.core:core-ktx:1.2.0"
+    const val legacy = "androidx.legacy:legacy-support-v4:1.0.0"
+    const val lifecycle = "androidx.lifecycle:lifecycle-extensions:2.2.0"
 }
 
 object Design {
-    val constrainsLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
+    const val material = "com.google.android.material:material:1.1.0"
+    const val recyclerview = "androidx.recyclerview:recyclerview:1.1.0"
+}
+
+object Room {
+    const val runtime = "androidx.room:room-runtime:$room_version"
+    const val compilerRoom = "androidx.room:room-compiler:$room_version"
 }
 
 object Module {
-    val utils = ":utils"
+    const val utils = ":utils"
 }

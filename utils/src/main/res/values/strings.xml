@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">N-Pocket</string>
+    <string name="money">money</string>
+    <string name="gopay">gopay</string>
+    <string name="ovo">ovo</string>
+    <string name="note_money">Note Money</string>
+    <string name="note_gopay">Note Gopay</string>
+    <string name="note_ovo">Note Ovo</string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="amount">Amount</string>
+    <string name="input_note_pocket">Input Note Pocket %s</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="submit">submit</string>
+    <string name="saldo">Saldo</string>
+    <string name="amount_balance">0</string>
+    <string name="_160_data_description"><![CDATA[ %s]]></string>
+    <string name="_160_data_amount"><![CDATA[ Rp %s]]></string>
+    <string name="_160_data_amount_negative"><![CDATA[ - Rp %s]]></string>
+    <string name="balance">Rp %s</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="welcome_app">Welcome in N-Pocket</string>
+    <string name="description_apps">This application is to use manage your pocket (money, copay, ovo). With this, you can be easier to manage your expenses and income.</string>
+    <string name="input_your_name">Input Your Name</string>
+    <string name="enter_number_phone_profile">Enter Your Number Phone</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="input_your_money_balance">Input Your Money Balance</string>
+    <string name="enter_money_saldo">Enter Money Saldo</string>
+    <string name="enter_gopay_saldo">Enter GOPAY Saldo</string>
+    <string name="enter_ovo_saldo">Enter OVO Saldo</string>
+    <string name="finish">Finish</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="todo">todo</string>
 </resources>
