@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="300dp"
-            android:fontFamily="sans-serif-condensed-medium"
+            app:fontFamily="@string/font_family_condensed_medium"
             android:text="@string/input_your_money_balance"
             android:textColor="@android:color/black"
             android:textSize="24sp"
