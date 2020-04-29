@@ -29,8 +29,6 @@
     <string name="enter_gopay_saldo">Enter GOPAY Saldo</string>
     <string name="enter_ovo_saldo">Enter OVO Saldo</string>
     <string name="finish">Finish</string>
-    <string name="enter_date">Enter Date</string>
     <string name="enter_description">Enter Description</string>
     <string name="todo">todo</string>
-    <string name="change">Change</string>
 </resources>
