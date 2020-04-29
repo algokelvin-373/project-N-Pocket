@@ -17,6 +17,7 @@ import com.algokelvin.utils.viewmodel.PocketViewModel
 import kotlinx.android.synthetic.main.fragment_money.*
 import kotlinx.android.synthetic.main.item_data_pocket.view.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MoneyFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -41,11 +42,16 @@ class MoneyFragment : Fragment() {
                         else -> (m + 1).toString()
                     }
                     dateMoney.text = getDateConvert("yyyy.MM.dd", "$y.$month.$d", "d MMM yyyy")
+                    val listPocketMoney = pocketViewModel.getNotePocket(requireContext(), "money", dateMoney.text.toString()) as ArrayList<PocketEntity>
+                    setItemPocketMoney(listPocketMoney)
                 }, year, month, day)
             picker.show()
         }
 
         val listPocketMoney = pocketViewModel.getNotePocket(requireContext(), "money", dateMoney.text.toString()) as ArrayList<PocketEntity>
+        setItemPocketMoney(listPocketMoney)
+    }
+    private fun setItemPocketMoney(listPocketMoney: ArrayList<PocketEntity>) {
         rvItemPocketMoney.setupAdapterData(R.layout.item_data_pocket, requireContext(), listPocketMoney) {
             data {
                 viewItem.descriptionPocket.text = getString(R.string._160_data_description, item?.description)
